@@ -56,7 +56,7 @@
                                 </div>
                                 <div class="details">
                                     <ul class="meta list-inline mb-0">
-                                        <li class="list-inline-item"><a href="#"><img src="{{ asset('assets/images/other/author-sm.png') }}" class="author" alt="author"/>Indrajatim Doe</a></li>
+                                        {{-- <li class="list-inline-item"><a href="#"><img src="{{ asset('assets/images/other/author-sm.png') }}" class="author" alt="author"/>Indrajatim Doe</a></li> --}}
                                         <li class="list-inline-item">{{ date('d-m-Y', strtotime($item->tanggal)); }}</li>
                                     </ul>
                                     <h5 class="post-title mb-3 mt-3"><a href="{{ url($item->kategori_slug.'/'.$item->slug) }}">{{ $item->judul }}</a></h5>
