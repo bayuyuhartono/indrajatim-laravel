@@ -60,7 +60,7 @@ class HomeController extends Controller
 
     function kategori_list($kategori)
     {
-        $kategoriDetail = Kategori::where('slug',$kategori)
+        $kategoriDetail = Kategori::where('kategori_slug',$kategori)
             ->first();
 
         $listBerita = Berita::select('tbl_berita.*', 'tbl_kategori.kategori', 'tbl_kategori.kategori_slug as kategori_slug')
