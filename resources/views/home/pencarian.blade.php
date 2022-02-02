@@ -75,7 +75,7 @@
                                         </ul>
                                     </div>
                                     <div class="more-button float-end">
-                                        <a href="blog-single.html"><span class="icon-options"></span></a>
+                                        <a href="{{ url($item->kategori_slug.'/'.$item->slug) }}"><span class="icon-options"></span></a>
                                     </div>
                                 </div>
                             </div>
