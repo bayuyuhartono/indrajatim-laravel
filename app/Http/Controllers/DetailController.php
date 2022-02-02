@@ -11,7 +11,7 @@ class DetailController extends Controller
 {
     function detail($kategori, $slug)
     {
-        $kategoriDetail = Kategori::where('slug',$kategori)
+        $kategoriDetail = Kategori::where('kategori_slug',$kategori)
             ->first();
         
         $detailBerita = Berita::select('tbl_berita.*', 'tbl_kategori.kategori', 'tbl_kategori.kategori_slug as kategori_slug')
