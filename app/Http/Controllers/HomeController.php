@@ -11,34 +11,34 @@ class HomeController extends Controller
 {
     function index()
     {
-        $carouselnews = Berita::select('tbl_berita.*', 'tbl_kategori.kategori', 'tbl_kategori.slug as kategori_slug')
+        $carouselnews = Berita::select('tbl_berita.*', 'tbl_kategori.kategori', 'tbl_kategori.kategori_slug as kategori_slug')
             ->join('tbl_kategori', 'tbl_kategori.id', '=', 'tbl_berita.id_kategori')
             ->orderBy('tanggal', 'desc') 
             ->take(3)
             ->get();
 
-        $infoterkini = Berita::select('tbl_berita.*', 'tbl_kategori.kategori', 'tbl_kategori.slug as kategori_slug')
+        $infoterkini = Berita::select('tbl_berita.*', 'tbl_kategori.kategori', 'tbl_kategori.kategori_slug as kategori_slug')
             ->join('tbl_kategori', 'tbl_kategori.id', '=', 'tbl_berita.id_kategori')
             ->where('id_kategori','4')
             ->orderBy('tanggal', 'desc') 
             ->take(5)
             ->get();
         
-        $kabarjatim = Berita::select('tbl_berita.*', 'tbl_kategori.kategori', 'tbl_kategori.slug as kategori_slug')
+        $kabarjatim = Berita::select('tbl_berita.*', 'tbl_kategori.kategori', 'tbl_kategori.kategori_slug as kategori_slug')
             ->join('tbl_kategori', 'tbl_kategori.id', '=', 'tbl_berita.id_kategori')
             ->where('id_kategori','6')
             ->orderBy('tanggal', 'desc') 
             ->take(6)
             ->get();
             
-        $budaya = Berita::select('tbl_berita.*', 'tbl_kategori.kategori', 'tbl_kategori.slug as kategori_slug')
+        $budaya = Berita::select('tbl_berita.*', 'tbl_kategori.kategori', 'tbl_kategori.kategori_slug as kategori_slug')
             ->join('tbl_kategori', 'tbl_kategori.id', '=', 'tbl_berita.id_kategori')
             ->where('id_kategori','2')
             ->orderBy('tanggal', 'desc') 
             ->take(5)
             ->get();
 
-        $sejarah = Berita::select('tbl_berita.*', 'tbl_kategori.kategori', 'tbl_kategori.slug as kategori_slug')
+        $sejarah = Berita::select('tbl_berita.*', 'tbl_kategori.kategori', 'tbl_kategori.kategori_slug as kategori_slug')
             ->join('tbl_kategori', 'tbl_kategori.id', '=', 'tbl_berita.id_kategori')
             ->where('id_kategori','3')
             ->orderBy('tanggal', 'desc') 
@@ -63,7 +63,7 @@ class HomeController extends Controller
         $kategoriDetail = Kategori::where('slug',$kategori)
             ->first();
 
-        $listBerita = Berita::select('tbl_berita.*', 'tbl_kategori.kategori', 'tbl_kategori.slug as kategori_slug')
+        $listBerita = Berita::select('tbl_berita.*', 'tbl_kategori.kategori', 'tbl_kategori.kategori_slug as kategori_slug')
             ->join('tbl_kategori', 'tbl_kategori.id', '=', 'tbl_berita.id_kategori')
             ->where('id_kategori',$kategoriDetail['id'])
             ->orderBy('tanggal', 'desc') 
@@ -79,7 +79,7 @@ class HomeController extends Controller
     public function cari(Request $request)
     {
         $q = $request->q;
-        $listBeritaPencarian = Berita::select('tbl_berita.*', 'tbl_kategori.kategori', 'tbl_kategori.slug as kategori_slug')
+        $listBeritaPencarian = Berita::select('tbl_berita.*', 'tbl_kategori.kategori', 'tbl_kategori.kategori_slug as kategori_slug')
             ->join('tbl_kategori', 'tbl_kategori.id', '=', 'tbl_berita.id_kategori')
             ->where('judul', 'like', '%'.$q.'%')
             ->orderBy('tanggal', 'desc') 
@@ -94,7 +94,7 @@ class HomeController extends Controller
 
     public function getPopuler()
     {
-        $populer = Berita::select('tbl_berita.*', 'tbl_kategori.kategori', 'tbl_kategori.slug as kategori_slug')
+        $populer = Berita::select('tbl_berita.*', 'tbl_kategori.kategori', 'tbl_kategori.kategori_slug as kategori_slug')
             ->join('tbl_kategori', 'tbl_kategori.id', '=', 'tbl_berita.id_kategori')
             ->where('tanggal', '>=', Carbon::now()->subDays(14)->toDateTimeString())
             ->orderBy('count_hits', 'desc') 
