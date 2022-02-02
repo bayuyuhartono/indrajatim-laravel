@@ -12,7 +12,8 @@
             /* height: 100%; */
         }
         .details {
-            height: 380px;
+            height: 345px;
+            
         }
 	</style>
 @endpush
