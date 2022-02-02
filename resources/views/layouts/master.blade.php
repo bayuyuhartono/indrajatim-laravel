@@ -4,7 +4,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>Indrajatim</title>
-    <meta name="description" content="Indrajatim - Minimal Blog & Magazine HTML Theme">
+    <meta name="description" content="Indrajatim - Berita Terkini Jawa Timur">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
 
