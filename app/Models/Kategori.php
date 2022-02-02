@@ -8,5 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class Kategori extends Model
 {
     use HasFactory;
-    protected $table = 'tbl_Kategori';
+    protected $table = 'tbl_kategori';
 }
