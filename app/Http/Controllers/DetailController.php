@@ -14,7 +14,7 @@ class DetailController extends Controller
         $kategoriDetail = Kategori::where('slug',$kategori)
             ->first();
         
-        $detailBerita = Berita::select('tbl_berita.*', 'tbl_kategori.kategori', 'tbl_kategori.slug as kategori_slug')
+        $detailBerita = Berita::select('tbl_berita.*', 'tbl_kategori.kategori', 'tbl_kategori.kategori_slug as kategori_slug')
             ->join('tbl_kategori', 'tbl_kategori.id', '=', 'tbl_berita.id_kategori')
             ->where('id_kategori',$kategoriDetail['id'])
             ->where('tbl_berita.slug',$slug)
@@ -34,7 +34,7 @@ class DetailController extends Controller
 
     public function getPopuler()
     {
-        $populer = Berita::select('tbl_berita.*', 'tbl_kategori.kategori', 'tbl_kategori.slug as kategori_slug')
+        $populer = Berita::select('tbl_berita.*', 'tbl_kategori.kategori', 'tbl_kategori.kategori_slug as kategori_slug')
             ->join('tbl_kategori', 'tbl_kategori.id', '=', 'tbl_berita.id_kategori')
             ->where('tanggal', '>=', Carbon::now()->subDays(14)->toDateTimeString())
             ->orderBy('count_hits', 'desc') 
