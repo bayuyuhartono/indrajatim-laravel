@@ -21,7 +21,7 @@
 						</div>
 						<a href="{{ url($item->kategori_slug.'/'.$item->slug) }}">
 							<div class="thumb rounded carousel-img">
-								<img src="{{ asset('assets/admin/upload/berita/'.$item['gambar']) }}" onerror="this.src='{{ asset('assets/images/posts/featured-xl-1.jpg') }}'" alt="post-title" />
+								<img src="{{ asset('assets/admin/upload/berita/'.$item['gambar']) }}" onerror="this.src='{{ asset('assets/images/posts/featured-xl-1.jpg') }}'" alt="post-title" style="width: 100%" />
 							</div>
 						</a>
 					</div>
