@@ -65,7 +65,7 @@
                                     <p class="excerpt mb-0">{{ Str::limit($item->caption, 150) }}</p>
                                 </div>
                                 <div class="post-bottom clearfix d-flex align-items-center">
-                                    <div class="social-share me-auto">
+                                    <div class="social-share me-auto"> 
                                         <button class="toggle-button icon-share"></button>
                                         <ul class="icons list-unstyled list-inline mb-0">
                                             <li class="list-inline-item"><a href="#"><i class="fab fa-facebook-f"></i></a></li>

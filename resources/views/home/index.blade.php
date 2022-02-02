@@ -24,7 +24,7 @@
 								<img src="{{ asset('assets/admin/upload/berita/'.$item['gambar']) }}" onerror="this.src='{{ asset('assets/images/posts/featured-xl-1.jpg') }}'" alt="post-title" style="width: 100%; max-height: 550px;" />
 							</div>
 						</a>
-					</div>
+					</div> 
 				@endforeach
 			</div>
 		</div>

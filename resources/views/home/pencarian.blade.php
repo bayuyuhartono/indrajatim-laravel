@@ -62,7 +62,7 @@
                                     <h5 class="post-title mb-3 mt-3"><a href="{{ url($item->kategori_slug.'/'.$item->slug) }}">{{ $item->judul }}</a></h5>
                                     <p class="excerpt mb-0">{{ Str::limit($item->caption, 150) }}</p>
                                 </div>
-                                <div class="post-bottom clearfix d-flex align-items-center">
+                                <div class="post-bottom clearfix d-flex align-items-center"> 
                                     <div class="social-share me-auto">
                                         <button class="toggle-button icon-share"></button>
                                         <ul class="icons list-unstyled list-inline mb-0">
