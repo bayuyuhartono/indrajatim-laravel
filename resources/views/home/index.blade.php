@@ -319,6 +319,7 @@
 
 					</div>
 
+					<br>
 					<!-- horizontal ads -->
 					<div class="ads-horizontal text-md-center">
 						<span class="ads-title">- Sponsored Ad -</span>
