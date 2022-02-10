@@ -9,12 +9,12 @@
             <!-- social icons -->
             <div class="col-md-4 text-center">
                 <ul class="social-icons list-unstyled list-inline mb-0">
-                    <li class="list-inline-item"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                    <li class="list-inline-item"><a href="#"><i class="fab fa-twitter"></i></a></li>
-                    <li class="list-inline-item"><a href="#"><i class="fab fa-instagram"></i></a></li>
-                    <li class="list-inline-item"><a href="#"><i class="fab fa-pinterest"></i></a></li>
-                    <li class="list-inline-item"><a href="#"><i class="fab fa-medium"></i></a></li>
-                    <li class="list-inline-item"><a href="#"><i class="fab fa-youtube"></i></a></li>
+                    <li class="list-inline-item"><a href="https://www.facebook.com/indrajatim.com"><i class="fab fa-facebook-f"></i></a></li>
+                    <li class="list-inline-item"><a href="https://twitter.com/indrajatimcom"><i class="fab fa-twitter"></i></a></li>
+                    <li class="list-inline-item"><a href="https://www.instagram.com/indrajatim.com"><i class="fab fa-instagram"></i></a></li>
+                    
+                    
+                    <li class="list-inline-item"><a href="https://www.youtube.com/indrajatim"><i class="fab fa-youtube"></i></a></li>
                 </ul>
             </div>
 

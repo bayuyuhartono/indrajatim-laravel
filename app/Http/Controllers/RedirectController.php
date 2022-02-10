@@ -7,38 +7,23 @@ use App\Models\Berita;
 use App\Models\Kategori;
 use Carbon\Carbon;
 
-class DetailController extends Controller
+class RedirectController extends Controller
 {
-    function detail($kategori, $slug)
-    {
-        $kategoriDetail = Kategori::where('kategori_slug',$kategori)
-            ->first();
-        
+    function detail_old_url($kategori, $slug)
+    {       
         $detailBerita = Berita::select('tbl_berita.*', 'tbl_kategori.kategori', 'tbl_kategori.kategori_slug as kategori_slug')
             ->join('tbl_kategori', 'tbl_kategori.id', '=', 'tbl_berita.id_kategori')
-            ->where('id_kategori',$kategoriDetail['id'])
             ->where('tbl_berita.slug',$slug)
             ->first();
 
         if (!$detailBerita) {
-            return abort(404);
+            return redirect(url('/'));
         }
 
-        $increase = intval($detailBerita['count_hits']) + 1;
+        $generateUrl = url($detailBerita->kategori_slug.'/'.$slug,);
 
-        Berita::where('id_berita',$detailBerita['id_berita'])
-            ->update(['count_hits' => $increase]);
+        return redirect($generateUrl);
 
-        $tag = explode(",", $detailBerita->tag);
-
-        $populer = $this->getPopuler();
-
-        $res = view('detail.index', [
-            'detailBerita' => $detailBerita,
-            'tag' => $tag,
-            'populer' => $populer,
-        ]);
-        return $res;
     }
 
     public function getPopuler()

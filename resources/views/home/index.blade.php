@@ -41,7 +41,9 @@
 					<!-- section header -->
 					<div class="section-header">
 						<h3 class="section-title">Info Terkini</h3>
-						<img src="{{ asset('assets/images/wave.svg') }}" class="wave" alt="wave" />
+						<svg height="20" width="113">
+      <line x1="0" y1="10" x2="100" y2="10" style="stroke:#203656;stroke-width:3" />
+    </svg>
 					</div>
 
 					<div class="padding-30 rounded bordered">
@@ -106,7 +108,7 @@
 					<div class="ads-horizontal text-md-center">
 						<span class="ads-title">- Sponsored Ad -</span>
 						<a href="#">
-							<img src="https://indrajatim.com/assets/admin/upload/banner/1636963891.jpg" alt="Advertisement" />
+							<img src="{{ asset('assets/admin/upload/banner/1636963891.jpg') }}" alt="Advertisement" />
 						</a>
 					</div>
 
@@ -115,7 +117,9 @@
 					<!-- section header -->
 					<div class="section-header">
 						<h3 class="section-title">Kabar Jatim</h3>
-						<img src="{{ asset('assets/images/wave.svg') }}" class="wave" alt="wave" />
+						<svg height="20" width="113">
+      <line x1="0" y1="10" x2="100" y2="10" style="stroke:#203656;stroke-width:3" />
+    </svg>
 					</div>
 
 					<div class="padding-30 rounded bordered">
@@ -221,7 +225,9 @@
 					<!-- section header -->
 					<div class="section-header">
 						<h3 class="section-title">Budaya</h3>
-						<img src="{{ asset('assets/images/wave.svg') }}" class="wave" alt="wave" />
+						<svg height="20" width="113">
+      <line x1="0" y1="10" x2="100" y2="10" style="stroke:#203656;stroke-width:3" />
+    </svg>
 						<div class="slick-arrows-top">
 							<button type="button" data-role="none" class="carousel-topNav-prev slick-custom-buttons" aria-label="Previous"><i class="icon-arrow-left"></i></button>
 							<button type="button" data-role="none" class="carousel-topNav-next slick-custom-buttons" aria-label="Next"><i class="icon-arrow-right"></i></button>
@@ -263,7 +269,9 @@
 					<!-- section header -->
 					<div class="section-header">
 						<h3 class="section-title">Sejarah</h3>
-						<img src="{{ asset('assets/images/wave.svg') }}" class="wave" alt="wave" />
+						<svg height="20" width="113">
+      <line x1="0" y1="10" x2="100" y2="10" style="stroke:#203656;stroke-width:3" />
+    </svg>
 					</div>
 
 					<div class="padding-30 rounded bordered">
@@ -324,7 +332,7 @@
 					<div class="ads-horizontal text-md-center">
 						<span class="ads-title">- Sponsored Ad -</span>
 						<a href="#">
-							<img src="https://indrajatim.com/assets/admin/upload/banner/1637030741.jpg" alt="Advertisement" />
+							<img src="{{ asset('assets/admin/upload/banner/1637030741.jpg') }}" alt="Advertisement" />
 						</a>
 					</div>
 
@@ -341,7 +349,9 @@
 						<div class="widget rounded">
 							<div class="widget-header text-center">
 								<h3 class="widget-title">Berita Populer</h3>
-								<img src="{{ asset('assets/images/wave.svg') }}" class="wave" alt="wave" />
+								<svg height="20" width="113">
+      <line x1="0" y1="10" x2="100" y2="10" style="stroke:#203656;stroke-width:3" />
+    </svg>
 							</div>
 							<div class="widget-content">
 								@foreach ($populer as $item)									
@@ -370,16 +380,16 @@
 						<div class="widget no-container rounded text-md-center">
 							<span class="ads-title">- Sponsored Ad -</span>
 							<a href="#" class="widget-ads">
-								<img src="https://indrajatim.com/assets/admin/upload/banner/1633681714.jpg" alt="Advertisement" />	
-								<img src="https://indrajatim.com/assets/admin/upload/banner/amigos.jpg" alt="Advertisement" />	
-								<img src="https://indrajatim.com/assets/admin/upload/banner/griyabersemi.jpg" alt="Advertisement" />	
-								<img src="https://indrajatim.com/assets/other/plasma_cutting.png" alt="Advertisement" />	
-								<img src="https://indrajatim.com/assets/other/alkautsar.jpg" alt="Advertisement" />	
-								<img src="https://indrajatim.com/assets/other/sklera.png" alt="Advertisement" />	
-								<img src="https://indrajatim.com/assets/other/spacebanner_2.png" alt="Advertisement" />	
-								<img src="https://indrajatim.com/assets/other/spacebanner_3.png" alt="Advertisement" />	
-								<img src="https://indrajatim.com/assets/other/spacebanner_4.png" alt="Advertisement" />	
-								<img src="https://indrajatim.com/assets/other/spacebanner_5.png" alt="Advertisement" />	
+								<img src="{{ asset('assets/admin/upload/banner/1633681714.jpg') }}" alt="Advertisement" />	
+								<img src="{{ asset('assets/admin/upload/banner/amigos.jpg') }}" alt="Advertisement" />	
+								<img src="{{ asset('assets/admin/upload/banner/griyabersemi.jpg') }}" alt="Advertisement" />	
+								<img src="{{ asset('assets/other/plasma_cutting.png') }}" alt="Advertisement" />	
+								<img src="{{ asset('assets/other/alkautsar.jpg') }}" alt="Advertisement" />	
+								<img src="{{ asset('assets/other/sklera.png') }}" alt="Advertisement" />	
+								<img src="{{ asset('assets/other/spacebanner_2.png') }}" alt="Advertisement" />	
+								<img src="{{ asset('assets/other/spacebanner_3.png') }}" alt="Advertisement" />	
+								<img src="{{ asset('assets/other/spacebanner_4.png') }}" alt="Advertisement" />	
+								<img src="{{ asset('assets/other/spacebanner_5.png') }}" alt="Advertisement" />	
 							</a>
 						</div>
 

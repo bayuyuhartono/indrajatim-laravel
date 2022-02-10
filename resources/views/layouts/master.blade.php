@@ -2,11 +2,63 @@
 <html>
 
 <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-T3KH7JK37T"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-T3KH7JK37T');
+    </script>
+    
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-NP2T99J');</script>
+    <!-- End Google Tag Manager -->
+
+    <title>{{ isset($detailBerita->judul) ? $detailBerita->judul : 'Berita Terkini Jawa Timur'; }} - indrajatim.com</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Indrajatim</title>
-    <meta name="description" content="Indrajatim - Berita Terkini Jawa Timur">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="author" content="INDRA JATIM" />
+    <meta name="description" content="{{ isset($detailBerita->judul) ? $detailBerita->judul : 'Berita terkini dan terbaru dari Jawa Timur mengenai politik, budaya, sejarah, hiburan dan informasi masyarakat.'; }}">
+    <meta name="keywords" content="{{ isset($detailBerita->judul) ? $detailBerita->judul : 'berita terkini, berita jatim, berita politik, berita terbaru, berita hari ini, budaya'; }}">
+    <meta name="news_keywords" content="{{ isset($detailBerita->judul) ? $detailBerita->judul : 'berita terkini, berita jatim, berita politik, berita terbaru, berita hari ini, budaya'; }}">
+    <meta content='id' name='language'/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="googlebot" content="index, follow" />
+    <meta name="author" content="Indra Jatim">
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="id" />
+    <meta name="geo.country" content="id" />
+    <meta http-equiv="content-language" content="In-Id" />
+    <meta name="geo.placename" content="Indonesia" />
+
+    <meta property="og:type" content="article"/>
+    <meta property="og:url" content="{{ $actual_link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";  }}">
+    <meta property="og:title" content="{{ isset($detailBerita->judul) ? $detailBerita->judul : 'Berita Terkini Jawa Timur'; }} - indrajatim.com">
+    <meta property="og:description" content="{{ isset($detailBerita->judul) ? $detailBerita->judul : 'Berita terkini dan terbaru dari Jawa Timur mengenai politik, budaya, sejarah, hiburan dan informasi masyarakat'; }}">
+    <meta property="og:image" content="{{ isset($detailBerita->gambar) ? asset('assets/admin/upload/berita/'.$detailBerita->Gambar) : asset('assets/indrajatim_assets/indrajatim-og.png'); }}">
+    <meta property="og:image:secure_url" content="{{ isset($detailBerita->gambar) ? asset('assets/admin/upload/berita/'.$detailBerita->Gambar) : asset('assets/indrajatim_assets/indrajatim-og.png'); }}">
+    <meta property="og:site_name" content="INDRAJATIM.com" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image:alt" content="Indrajatim">
+    <meta name="twitter:site" content="@indrajatimcom" />
+    <meta name="twitter:creator" content="@indrajatimcom">
+    <meta name="twitter:title" content="{{ isset($detailBerita->judul) ? $detailBerita->judul : 'Berita Terkini Jawa Timur'; }} - indrajatim.com">
+    <meta name="twitter:description" content="{{ isset($detailBerita->judul) ? $detailBerita->judul : 'Berita terkini dan terbaru dari Jawa Timur mengenai politik, budaya, sejarah, hiburan dan informasi masyarakat'; }}">
+    <meta name="twitter:image" content="{{ isset($detailBerita->gambar) ? asset('assets/admin/upload/berita/'.$detailBerita->Gambar) : asset('assets/indrajatim_assets/indrajatim-og.png'); }}">
+    
+    <meta name="google-site-verification" content="2wEnOD0KzP2P4JJj45kb9w9EgQfvf5pfWGCuhOIWOks" />
+
+    <link rel="shortcut icon" href="{{ asset('assets/indrajatim_assets/favicon_ijt1.ico');}}" />
+    <link rel="canonical" href="{{ url()->current() }}">
 
     <!-- STYLES -->
     <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}" type="text/css" media="all">
@@ -30,6 +82,11 @@
 </head>
 
 <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NP2T99J" 
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
     <!-- site wrapper -->
     <div class="site-wrapper">
 
@@ -94,12 +151,12 @@
 
         <!-- social icons -->
         <ul class="social-icons list-unstyled list-inline mb-0 mt-auto w-100">
-            <li class="list-inline-item"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-            <li class="list-inline-item"><a href="#"><i class="fab fa-twitter"></i></a></li>
-            <li class="list-inline-item"><a href="#"><i class="fab fa-instagram"></i></a></li>
-            <li class="list-inline-item"><a href="#"><i class="fab fa-pinterest"></i></a></li>
-            <li class="list-inline-item"><a href="#"><i class="fab fa-medium"></i></a></li>
-            <li class="list-inline-item"><a href="#"><i class="fab fa-youtube"></i></a></li>
+            <li class="list-inline-item"><a href="https://www.facebook.com/indrajatim.com"><i class="fab fa-facebook-f"></i></a></li>
+            <li class="list-inline-item"><a href="https://twitter.com/indrajatimcom"><i class="fab fa-twitter"></i></a></li>
+            <li class="list-inline-item"><a href="https://www.instagram.com/indrajatim.com"><i class="fab fa-instagram"></i></a></li>
+            
+            
+            <li class="list-inline-item"><a href="https://www.youtube.com/indrajatim"><i class="fab fa-youtube"></i></a></li>
         </ul>
     </div>
 

@@ -63,6 +63,10 @@ class HomeController extends Controller
         $kategoriDetail = Kategori::where('kategori_slug',$kategori)
             ->first();
 
+        if (!$kategoriDetail) {
+            return abort(404);
+        }
+
         $listBerita = Berita::select('tbl_berita.*', 'tbl_kategori.kategori', 'tbl_kategori.kategori_slug as kategori_slug')
             ->join('tbl_kategori', 'tbl_kategori.id', '=', 'tbl_berita.id_kategori')
             ->where('id_kategori',$kategoriDetail['id'])
