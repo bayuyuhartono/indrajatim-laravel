@@ -43,8 +43,8 @@
     <meta property="og:url" content="{{ $actual_link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";  }}">
     <meta property="og:title" content="{{ isset($detailBerita->judul) ? $detailBerita->judul : 'Berita Terkini Jawa Timur'; }} - indrajatim.com">
     <meta property="og:description" content="{{ isset($detailBerita->judul) ? $detailBerita->judul : 'Berita terkini dan terbaru dari Jawa Timur mengenai politik, budaya, sejarah, hiburan dan informasi masyarakat'; }}">
-    <meta property="og:image" content="{{ isset($detailBerita->gambar) ? asset('assets/admin/upload/berita/'.$detailBerita->Gambar) : asset('assets/indrajatim_assets/indrajatim-og.png'); }}">
-    <meta property="og:image:secure_url" content="{{ isset($detailBerita->gambar) ? asset('assets/admin/upload/berita/'.$detailBerita->Gambar) : asset('assets/indrajatim_assets/indrajatim-og.png'); }}">
+    <meta property="og:image" content="{{ isset($detailBerita->gambar) ? asset('assets/admin/upload/berita/'.$detailBerita->gambar) : asset('assets/indrajatim_assets/indrajatim-og.png'); }}">
+    <meta property="og:image:secure_url" content="{{ isset($detailBerita->gambar) ? asset('assets/admin/upload/berita/'.$detailBerita->gambar) : asset('assets/indrajatim_assets/indrajatim-og.png'); }}">
     <meta property="og:site_name" content="INDRAJATIM.com" />
 
     <meta name="twitter:card" content="summary_large_image" />
@@ -53,7 +53,7 @@
     <meta name="twitter:creator" content="@indrajatimcom">
     <meta name="twitter:title" content="{{ isset($detailBerita->judul) ? $detailBerita->judul : 'Berita Terkini Jawa Timur'; }} - indrajatim.com">
     <meta name="twitter:description" content="{{ isset($detailBerita->judul) ? $detailBerita->judul : 'Berita terkini dan terbaru dari Jawa Timur mengenai politik, budaya, sejarah, hiburan dan informasi masyarakat'; }}">
-    <meta name="twitter:image" content="{{ isset($detailBerita->gambar) ? asset('assets/admin/upload/berita/'.$detailBerita->Gambar) : asset('assets/indrajatim_assets/indrajatim-og.png'); }}">
+    <meta name="twitter:image" content="{{ isset($detailBerita->gambar) ? asset('assets/admin/upload/berita/'.$detailBerita->gambar) : asset('assets/indrajatim_assets/indrajatim-og.png'); }}">
     
     <meta name="google-site-verification" content="2wEnOD0KzP2P4JJj45kb9w9EgQfvf5pfWGCuhOIWOks" />
 
