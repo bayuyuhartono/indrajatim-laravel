@@ -34,7 +34,7 @@
                         <div class="form-group">
                             <label class="form-control-label">Slug: <span class="tx-danger">*</span></label>
                             <input class="form-control slug" type="text" name="slug" value=""
-                                placeholder="Masukan slug">
+                                placeholder="Masukan slug" required="">
                         </div>
                     </div>
                     <div class="col-lg-3">
@@ -47,7 +47,7 @@
                         <div class="form-group mg-b-10-force">
                             <label class="form-control-label">Judul Gambar: <span class="tx-danger">*</span></label>
                             <input class="form-control judulgambar" type="text" name="judulgambar" value=""
-                                placeholder="Judul Gambar">
+                                placeholder="Judul Gambar" required="">
                         </div>
                     </div>
                     <div class="col-lg-3">
@@ -66,7 +66,7 @@
                             <label class="form-control-label">Tanggal: (Bulan/Tanggal/Tahun) <span class="tx-danger">*</span></label>
                             <div class="input-group">
                                 <span class="input-group-addon"><i class="icon ion-calendar tx-16 lh-0 op-6"></i></span>
-                                <input type="text" name="tanggal" class="form-control fc-datepicker kategori" placeholder="MM/DD/YYYY">
+                                <input type="text" name="tanggal" class="form-control fc-datepicker kategori" placeholder="MM/DD/YYYY" required="">
                             </div>
                         </div>
                     </div>
@@ -84,7 +84,7 @@
                         <div class="form-group">
                             <label class="form-control-label">Caption: <span class="tx-danger">*</span></label>
                             <input class="form-control caption" type="text" name="caption" value=""
-                                placeholder="Masukan caption">
+                                placeholder="Masukan caption" required="">
                         </div>
                     </div>
                     <div class="col-lg-12">
