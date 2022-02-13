@@ -10,7 +10,7 @@
     <h5 class="am-title">Tambah Berita</h5>
     <form id="searchBar" class="search-bar" action="index.html">
         <div class="form-control-wrapper">
-            <input autocomplete="false" type="search" class="form-control bd-0" placeholder="Search...">
+            <input type="search" class="form-control bd-0" placeholder="Search...">
         </div><!-- form-control-wrapper -->
         <button id="searchBtn" class="btn btn-orange"><i class="fa fa-search"></i></button>
     </form><!-- search-bar -->
@@ -19,34 +19,34 @@
 <div class="am-pagebody">
 
     <div class="card pd-20 pd-sm-40">
-        <form method="POST" action="{{ url('admin/berita/edit/'.$berita['id_berita']) }}" enctype="multipart/form-data">
+        <form method="POST" action="{{ url('admin/berita/edit/'.$berita['id_berita']) }}" enctype="multipart/form-data" autocomplete="off">
             @csrf
             <div class="form-layout">
                 <div class="row mg-b-25">
                     <div class="col-lg-6">
                         <div class="form-group">
                             <label class="form-control-label">Judul: <span class="tx-danger">*</span></label>
-                            <input autocomplete="false" class="form-control judul" type="text" name="judul" value="{{ $berita['judul'] }}"
+                            <input class="form-control judul" type="text" name="judul" value="{{ $berita['judul'] }}"
                                 placeholder="Masukan judul">
                         </div>
                     </div>
                     <div class="col-lg-6">
                         <div class="form-group">
                             <label class="form-control-label">Slug: <span class="tx-danger">*</span></label>
-                            <input autocomplete="false" class="form-control slug" type="text" name="slug" value="{{ $berita['slug'] }}"
+                            <input class="form-control slug" type="text" name="slug" value="{{ $berita['slug'] }}"
                                 placeholder="Masukan slug">
                         </div>
                     </div>
                     <div class="col-lg-3">
                         <div class="form-group mg-b-10-force">
                             <label class="form-control-label">Gambar: <span class="tx-danger">*</span></label>
-                            <input autocomplete="false" type="file" name="gambar" class="form-control gambar" required="">
+                            <input type="file" name="gambar" class="form-control gambar" required="">
                         </div>
                     </div>
                     <div class="col-lg-3">
                         <div class="form-group mg-b-10-force">
                             <label class="form-control-label">Judul Gambar: <span class="tx-danger">*</span></label>
-                            <input autocomplete="false" class="form-control judulgambar" type="text" name="judulgambar" value="{{ $berita['judul_gambar'] }}"
+                            <input class="form-control judulgambar" type="text" name="judulgambar" value="{{ $berita['judul_gambar'] }}"
                                 placeholder="Judul Gambar">
                         </div>
                     </div>
@@ -66,7 +66,7 @@
                             <label class="form-control-label">Tanggal: (Bulan/Tanggal/Tahun) <span class="tx-danger">*</span></label>
                             <div class="input-group">
                                 <span class="input-group-addon"><i class="icon ion-calendar tx-16 lh-0 op-6"></i></span>
-                                <input autocomplete="false" type="text" name="tanggal" class="form-control fc-datepicker kategori" placeholder="MM/DD/YYYY" value="<?= date('m/d/Y', strtotime($berita['tanggal'])); ?>">
+                                <input type="text" name="tanggal" class="form-control fc-datepicker kategori" placeholder="MM/DD/YYYY" value="<?= date('m/d/Y', strtotime($berita['tanggal'])); ?>">
                             </div>
                         </div>
                     </div>
@@ -85,7 +85,7 @@
                     <div class="col-lg-6">
                         <div class="form-group">
                             <label class="form-control-label">Caption: <span class="tx-danger">*</span></label>
-                            <input autocomplete="false" class="form-control caption" type="text" name="caption" value="{{ $berita['caption'] }}"
+                            <input class="form-control caption" type="text" name="caption" value="{{ $berita['caption'] }}"
                                 placeholder="Masukan caption">
                         </div>
                     </div>
