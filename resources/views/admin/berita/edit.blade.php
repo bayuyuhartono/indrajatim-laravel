@@ -40,7 +40,7 @@
                     <div class="col-lg-3">
                         <div class="form-group mg-b-10-force">
                             <label class="form-control-label">Gambar: <span class="tx-danger">*</span></label>
-                            <input type="file" name="gambar" class="form-control gambar" required="">
+                            <input type="file" name="gambar" class="form-control gambar" >
                         </div>
                     </div>
                     <div class="col-lg-3">
