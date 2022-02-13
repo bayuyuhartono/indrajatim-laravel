@@ -10,6 +10,11 @@
 
 <div class="am-pagebody">
     <div class="card pd-20 pd-sm-40">
+        <div class="row">
+            <div class="col-3">
+                <a href="{{ url('admin/berita/create') }}" class="btn btn-primary btn-block mg-b-10">Tambah Data</a>
+            </div>
+        </div>
         <table class="table table-bordered yajra-datatable">
             <thead>
                 <tr>
