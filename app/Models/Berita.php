@@ -10,5 +10,5 @@ class Berita extends Model
     use HasFactory;
     public $timestamps = false;
     protected $table = 'tbl_berita';
-    protected $fillable = ['count_hits'];
+    protected $guarded = ['id_berita'];
 }

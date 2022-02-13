@@ -4,6 +4,12 @@
 	.featured-image img {
 		width: 100%;
 	}
+	.post-single .featured-image img {
+		margin-bottom: 7px;
+	}
+	.featured-image span {
+		padding-left: 5px;
+	}
 </style>
 @endpush
 @section('content')
@@ -28,7 +34,7 @@
 					<div class="ads-horizontal text-md-center">
 						<span class="ads-title">- Sponsored Ad -</span>
 						<a href="#">
-							<img src="{{ asset('assets/admin/upload/banner/1636963891.jpg') }}" alt="Advertisement" />
+							<img src="https://indrajatim.com/assets/admin/upload/banner/1636963891.jpg" alt="Advertisement" />
 						</a>
 					</div>
 
@@ -45,7 +51,8 @@
 						</div>
 						<!-- featured image -->
 						<div class="featured-image">
-							<img src="{{ asset('assets/admin/upload/berita/'.$detailBerita->gambar) }}" onerror="this.src='{{ asset('assets/images/posts/featured-lg.jpg') }}'" alt="post-title" />
+							<img src="{{ asset('assets/admin/upload/berita/'.$detailBerita->gambar) }}" onerror="this.src='{{ asset('assets/images/posts/featured-lg.jpg') }}'" alt="{{ $detailBerita->judul_gambar }}" />
+							<span>{{ $detailBerita->judul_gambar }}</span>
 						</div>
 						<!-- post content -->
 						<div class="post-content clearfix">
@@ -64,12 +71,12 @@
 								<div class="col-md-6 col-12">
 									<!-- social icons -->
 									<ul class="social-icons list-unstyled list-inline mb-0 float-md-end">
-										<li class="list-inline-item"><a href="https://www.facebook.com/indrajatim.com"><i class="fab fa-facebook-f"></i></a></li>
-										<li class="list-inline-item"><a href="https://twitter.com/indrajatimcom"><i class="fab fa-twitter"></i></a></li>
-										
-										
-										
-										<li class="list-inline-item"><a href="mailto:media@indrajatim.com"><i class="far fa-envelope"></i></a></li>
+										<li class="list-inline-item"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+										<li class="list-inline-item"><a href="#"><i class="fab fa-twitter"></i></a></li>
+										<li class="list-inline-item"><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+										<li class="list-inline-item"><a href="#"><i class="fab fa-pinterest"></i></a></li>
+										<li class="list-inline-item"><a href="#"><i class="fab fa-telegram-plane"></i></a></li>
+										<li class="list-inline-item"><a href="#"><i class="far fa-envelope"></i></a></li>
 									</ul>
 								</div>
 							</div>
@@ -82,7 +89,7 @@
 					<div class="ads-horizontal text-md-center">
 						<span class="ads-title">- Sponsored Ad -</span>
 						<a href="#">
-							<img src="{{ asset('assets/admin/upload/banner/1637030741.jpg') }}" alt="Advertisement" />
+							<img src="https://indrajatim.com/assets/admin/upload/banner/1637030741.jpg" alt="Advertisement" />
 						</a>
 					</div>
 
@@ -91,9 +98,9 @@
 				<div class="col-lg-4">
 
 					<!-- sidebar -->
-					<div class="sidebar">
+					<div class="">
 						<!-- widget about -->
-						<img src="{{ asset('assets/images/logo.png') }}" alt="logo.png" class="mb-4 badge-logo" />
+						<img src="{{ asset('assets/images/logo.png') }}" alt="logo.png" class="indrajatim" />
 						
 
 						<!-- widget popular posts -->
@@ -101,8 +108,8 @@
 							<div class="widget-header text-center">
 								<h3 class="widget-title">Berita Populer</h3>
 								<svg height="20" width="113">
-      <line x1="0" y1="10" x2="100" y2="10" style="stroke:#203656;stroke-width:3" />
-    </svg>
+									<line x1="0" y1="10" x2="100" y2="10" style="stroke:#203656;stroke-width:3" />
+								  </svg>
 							</div>
 							<div class="widget-content">
 								@foreach ($populer as $item)									
@@ -112,7 +119,7 @@
 											<span class="number">{{ $loop->index + 1 }}</span>
 											<a href="{{ url($item->kategori_slug.'/'.$item->slug) }}">
 												<div class="inner inner-populer">
-													<img src="{{ asset('assets/admin/upload/berita/'.$item['gambar']) }}" onerror="this.src='{{ asset('assets/images/posts/featured-xl-1.jpg') }}'" alt="post-title" />
+													<img src="{{ asset('assets/admin/upload/berita/'.$item['gambar']) }}" onerror="this.src='{{ asset('assets/images/posts/featured-xl-1.jpg') }}'" alt="{{ $item['judul_gambar'] }}" />
 												</div>
 											</a>
 										</div>
