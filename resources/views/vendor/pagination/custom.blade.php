@@ -1,4 +1,7 @@
 @if ($paginator->hasPages())
+
+@if((new \Jenssegers\Agent\Agent())->isDesktop())
+<div class="container">
     <nav>
         <ul class="pagination justify-content-center">
             @foreach ($elements as $element)
@@ -23,4 +26,15 @@
             @endforeach
         </ul>
     </nav>
+</div>    
+@else
+<div class="container">
+    <nav>
+        <ul class="pagination justify-content-center">         
+            <li class="page-item {{ $paginator->previousPageUrl() ? '' : 'disabled' }}"><a class="page-link" href="{{ $paginator->previousPageUrl() }}"><</a></li>
+            <li class="page-item {{ $paginator->nextPageUrl() ? '' : 'disabled' }}"><a class="page-link" href="{{ $paginator->nextPageUrl() }}">></a></li>
+        </ul>
+    </nav>
+</div> 
+@endif 
 @endif 
