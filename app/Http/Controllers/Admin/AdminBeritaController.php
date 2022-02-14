@@ -182,7 +182,7 @@ class AdminBeritaController extends Controller
         if ($request->ajax()) {
             $data = Berita::select('tbl_berita.*', 'tbl_kategori.kategori', 'tbl_kategori.kategori_slug as kategori_slug')
                 ->join('tbl_kategori', 'tbl_kategori.id', '=', 'tbl_berita.id_kategori')
-                ->orderBy('tanggal', 'desc') 
+                ->orderBy('id_berita', 'desc') 
                 ->get();
 
             return Datatables::of($data)
