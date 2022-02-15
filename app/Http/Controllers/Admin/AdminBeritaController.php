@@ -51,7 +51,7 @@ class AdminBeritaController extends Controller
 
         if ($request->hasFile('gambar')) {
             $gambar = $request->file('gambar');
-            $gambarName = substr($request->slug, 0, 10). '-ijt' . rand(10, 99) . $gambar->getClientOriginalExtension();
+            $gambarName = substr($request->slug, 0, 40). '-ijt' . rand(10, 99) . $gambar->getClientOriginalExtension();
             $gambar->move('assets/admin/upload/berita/', $gambarName);
         }
 
@@ -171,7 +171,7 @@ class AdminBeritaController extends Controller
 
         if ($request->hasFile('gambar')) {
             $gambar = $request->file('gambar');
-            $gambarName = substr($request->slug, 0, 10). '-ijt' . rand(10, 99) . $gambar->getClientOriginalExtension();
+            $gambarName = substr($request->slug, 0, 40). '-ijt' . rand(10, 99) . $gambar->getClientOriginalExtension();
             $gambar->move('assets/admin/upload/berita/', $gambarName);
 
             $berita = Berita::where('id_berita', $id)
