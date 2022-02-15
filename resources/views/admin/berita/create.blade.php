@@ -142,10 +142,20 @@
 
         var editor = new MediumEditor('.editable');
 
-        // Summernote editor
         $('#summernote').summernote({
-          height: 400,
-          tooltip: false
-        })
+            height: 400,
+            tooltip: false,
+            toolbar: [
+                // [groupName, [list of button]]
+                ['style', ['bold', 'italic', 'underline', 'clear']],
+                ['font', ['strikethrough', 'superscript', 'subscript']],
+                ['fontsize', ['fontsize','fontname']],
+                ['color', ['color']],
+                ['para', ['ul', 'ol', 'paragraph']],
+                ['height', ['height']],
+                ['insert', ['picture','link','video','table']],
+                ['misc', ['undo','redo']]
+            ]
+        });
     </script>
 @endpush

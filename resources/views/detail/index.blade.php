@@ -10,6 +10,9 @@
 	.featured-image span {
 		padding-left: 5px;
 	}
+	.judulgambar {
+		font-size: 13px;
+	}
 </style>
 @endpush
 @section('content')
@@ -52,7 +55,7 @@
 						<!-- featured image -->
 						<div class="featured-image">
 							<img src="{{ asset('assets/admin/upload/berita/'.$detailBerita->gambar) }}" onerror="this.src='{{ asset('assets/images/posts/featured-lg.jpg') }}'" alt="{{ $detailBerita->judul_gambar }}" />
-							<span>{{ $detailBerita->judul_gambar }}</span>
+							<span class="judulgambar">{{ $detailBerita->judul_gambar }}</span>
 						</div>
 						<!-- post content -->
 						<div class="post-content clearfix">
