@@ -7,11 +7,14 @@
 	.post-single .featured-image img {
 		margin-bottom: 7px;
 	}
-	.featured-image span {
-		padding-left: 5px;
-	}
-	.judulgambar {
+	.featured-image p {
 		font-size: 13px;
+		font-style: italic;
+		line-height: 15px;
+	}
+	
+	.post-single .post-content {
+		color: #373e47;
 	}
 </style>
 @endpush
@@ -55,7 +58,7 @@
 						<!-- featured image -->
 						<div class="featured-image">
 							<img src="{{ asset('assets/admin/upload/berita/'.$detailBerita->gambar) }}" onerror="this.src='{{ asset('assets/images/posts/featured-lg.jpg') }}'" alt="{{ $detailBerita->judul_gambar }}" />
-							<span class="judulgambar">{{ $detailBerita->judul_gambar }}</span>
+							<p>{{ $detailBerita->judul_gambar }}</p>
 						</div>
 						<!-- post content -->
 						<div class="post-content clearfix">
