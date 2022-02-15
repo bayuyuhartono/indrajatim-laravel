@@ -77,12 +77,11 @@
 								<div class="col-md-6 col-12">
 									<!-- social icons -->
 									<ul class="social-icons list-unstyled list-inline mb-0 float-md-end">
-										<li class="list-inline-item"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-										<li class="list-inline-item"><a href="#"><i class="fab fa-twitter"></i></a></li>
-										<li class="list-inline-item"><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-										<li class="list-inline-item"><a href="#"><i class="fab fa-pinterest"></i></a></li>
-										<li class="list-inline-item"><a href="#"><i class="fab fa-telegram-plane"></i></a></li>
-										<li class="list-inline-item"><a href="#"><i class="far fa-envelope"></i></a></li>
+										<li class="list-inline-item"><a href="https://www.facebook.com/indrajatim.com" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+										<li class="list-inline-item"><a href="https://twitter.com/indrajatimcom" target="_blank"><i class="fab fa-twitter"></i></a></li>
+										<li class="list-inline-item"><a href="https://www.instagram.com/indrajatimcom" target="_blank"><i class="fab fa-instagram"></i></a></li>
+										<li class="list-inline-item"><a href="https://www.youtube.com/indrajatim" target="_blank"><i class="fab fa-youtube"></i></a></li>
+										<li class="list-inline-item"><a href="mailto:media@indrajatim.com"><i class="far fa-envelope"></i></a></li>
 									</ul>
 								</div>
 							</div>
