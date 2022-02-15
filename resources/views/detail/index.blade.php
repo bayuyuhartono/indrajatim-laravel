@@ -105,7 +105,7 @@
 					<!-- sidebar -->
 					<div class="">
 						<!-- widget about -->
-						<img src="{{ asset('assets/images/logo.png') }}" alt="logo.png" class="indrajatim" />
+						<img src="{{ asset('assets/images/logo.png') }}" alt="logo.png" class="indrajatim badge-logo" />
 						
 
 						<!-- widget popular posts -->
