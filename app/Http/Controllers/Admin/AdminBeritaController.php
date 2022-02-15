@@ -64,13 +64,15 @@ class AdminBeritaController extends Controller
             $tag .= strtolower($value);
         }
 
+        $tanggal = Carbon::createFromFormat('m/d/Y', $request->tanggal);
+
         $berita = new Berita();
         $berita->judul = $request->judul;
         $berita->slug = $request->slug;
         $berita->gambar = $gambarName;
         $berita->judul_gambar = $request->judulgambar;
         $berita->id_kategori = $request->kategori;
-        $berita->tanggal = Carbon::parse($request->tanggal);
+        $berita->tanggal = $tanggal;
         $berita->tag = $tag;
         $berita->caption = $request->caption;
         $berita->content = $request->content;
