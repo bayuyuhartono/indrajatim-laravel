@@ -64,7 +64,25 @@ class AdminBeritaController extends Controller
             $tag .= strtolower($value);
         }
 
-        $tanggal = Carbon::createFromFormat('m/d/Y', $request->tanggal);
+        $content = $request->content;
+        $dom = new \DomDocument();
+        $dom->loadHtml($content, LIBXML_HTML_NOIMPLIED | LIBXML_HTML_NODEFDTD);
+        $imageFile = $dom->getElementsByTagName('img');
+    
+        foreach($imageFile as $item => $image){
+            $data = $image->getAttribute('src');
+            list($type, $data) = explode(';', $data);
+            list(, $data)      = explode(',', $data);
+            $imgeData = base64_decode($data);
+            $image_name= "/assets/admin/upload/berita/smr/" . $request->slug.rand(10, 99).'-ijt'.$item.'.png';
+            $path = public_path() . $image_name;
+            file_put_contents($path, $imgeData);
+            
+            $image->removeAttribute('src');
+            $image->setAttribute('src', $image_name);
+        }
+    
+        $content = $dom->saveHTML();
 
         $berita = new Berita();
         $berita->judul = $request->judul;
@@ -72,10 +90,10 @@ class AdminBeritaController extends Controller
         $berita->gambar = $gambarName;
         $berita->judul_gambar = $request->judulgambar;
         $berita->id_kategori = $request->kategori;
-        $berita->tanggal = $tanggal;
+        $berita->tanggal = Carbon::createFromFormat('m/d/Y', $request->tanggal);
         $berita->tag = $tag;
         $berita->caption = $request->caption;
-        $berita->content = $request->content;
+        $berita->content = $content;
         $berita->tanggal_dibuat = Carbon::now();
         $berita->tanggal_diubah = Carbon::now();
         $berita->save();
@@ -129,6 +147,26 @@ class AdminBeritaController extends Controller
             $tag .= strtolower($value);
         }
 
+        $content = $request->content;
+        $dom = new \DomDocument();
+        $dom->loadHtml($content, LIBXML_HTML_NOIMPLIED | LIBXML_HTML_NODEFDTD);
+        $imageFile = $dom->getElementsByTagName('img');
+    
+        foreach($imageFile as $item => $image){
+            $data = $image->getAttribute('src');
+            list($type, $data) = explode(';', $data);
+            list(, $data)      = explode(',', $data);
+            $imgeData = base64_decode($data);
+            $image_name= "/assets/admin/upload/berita/smr/" . $request->slug.rand(10, 99).'-ijt'.$item.'.png';
+            $path = public_path() . $image_name;
+            file_put_contents($path, $imgeData);
+            
+            $image->removeAttribute('src');
+            $image->setAttribute('src', $image_name);
+        }
+    
+        $content = $dom->saveHTML();
+
         if ($request->hasFile('gambar')) {
             $gambar = $request->file('gambar');
             $gambarName = substr($request->slug, 0, 10). '-ijt' . rand(10, 99) . $gambar->getClientOriginalExtension();
@@ -141,10 +179,10 @@ class AdminBeritaController extends Controller
                 'gambar' => $gambarName,
                 'judul_gambar' => $request->judulgambar,
                 'id_kategori' => $request->kategori,
-                'tanggal' => Carbon::parse($request->tanggal),
+                'tanggal' => Carbon::createFromFormat('m/d/Y', $request->tanggal),
                 'tag' => $tag,
                 'caption' => $request->caption,
-                'content' => $request->content,
+                'content' => $content,
                 'tanggal_diubah' => Carbon::now(),
             ]);
         } else {
@@ -154,10 +192,10 @@ class AdminBeritaController extends Controller
                 'slug' => $request->slug,
                 'judul_gambar' => $request->judulgambar,
                 'id_kategori' => $request->kategori,
-                'tanggal' => Carbon::parse($request->tanggal),
+                'tanggal' => Carbon::createFromFormat('m/d/Y', $request->tanggal),
                 'tag' => $tag,
                 'caption' => $request->caption,
-                'content' => $request->content,
+                'content' => $content,
                 'tanggal_diubah' => Carbon::now(),
             ]);
         }     
