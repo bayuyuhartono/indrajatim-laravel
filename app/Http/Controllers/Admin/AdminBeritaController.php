@@ -65,24 +65,24 @@ class AdminBeritaController extends Controller
         }
 
         $content = $request->content;
-        $dom = new \DomDocument();
-        $dom->loadHtml($content, LIBXML_HTML_NOIMPLIED | LIBXML_HTML_NODEFDTD);
-        $imageFile = $dom->getElementsByTagName('img');
+        // $dom = new \DomDocument();
+        // $dom->loadHtml($content, LIBXML_HTML_NOIMPLIED | LIBXML_HTML_NODEFDTD);
+        // $imageFile = $dom->getElementsByTagName('img');
     
-        foreach($imageFile as $item => $image){
-            $data = $image->getAttribute('src');
-            list($type, $data) = explode(';', $data);
-            list(, $data)      = explode(',', $data);
-            $imgeData = base64_decode($data);
-            $image_name= "/assets/admin/upload/berita/smr/" . $request->slug.rand(10, 99).'-ijt'.$item.'.png';
-            $path = public_path() . $image_name;
-            file_put_contents($path, $imgeData);
+        // foreach($imageFile as $item => $image){
+        //     $data = $image->getAttribute('src');
+        //     list($type, $data) = explode(';', $data);
+        //     list(, $data)      = explode(',', $data);
+        //     $imgeData = base64_decode($data);
+        //     $image_name= "/assets/admin/upload/berita/smr/" . $request->slug.rand(10, 99).'-ijt'.$item.'.png';
+        //     $path = public_path() . $image_name;
+        //     file_put_contents($path, $imgeData);
             
-            $image->removeAttribute('src');
-            $image->setAttribute('src', $image_name);
-        }
+        //     $image->removeAttribute('src');
+        //     $image->setAttribute('src', $image_name);
+        // }
     
-        $content = $dom->saveHTML();
+        // $content = $dom->saveHTML();
 
         $berita = new Berita();
         $berita->judul = $request->judul;
@@ -148,26 +148,26 @@ class AdminBeritaController extends Controller
         }
 
         $content = $request->content;
-        $dom = new \DomDocument();
-        $dom->loadHtml($content, LIBXML_HTML_NOIMPLIED | LIBXML_HTML_NODEFDTD);
-        $imageFile = $dom->getElementsByTagName('img');
+        // $dom = new \DomDocument();
+        // $dom->loadHtml($content, LIBXML_HTML_NOIMPLIED | LIBXML_HTML_NODEFDTD);
+        // $imageFile = $dom->getElementsByTagName('img');
     
-        foreach($imageFile as $item => $image){
-            $data = $image->getAttribute('src');
-            if (substr($data,-3) !== 'png') {
-                list($type, $data) = explode(';', $data);
-                list(, $data)      = explode(',', $data);
-                $imgeData = base64_decode($data);
-                $image_name= "/assets/admin/upload/berita/smr/" . $request->slug.rand(10, 99).'-ijt'.$item.'.png';
-                $path = public_path() . $image_name;
-                file_put_contents($path, $imgeData);
+        // foreach($imageFile as $item => $image){
+        //     $data = $image->getAttribute('src');
+        //     if (substr($data,-3) !== 'png') {
+        //         list($type, $data) = explode(';', $data);
+        //         list(, $data)      = explode(',', $data);
+        //         $imgeData = base64_decode($data);
+        //         $image_name= "/assets/admin/upload/berita/smr/" . $request->slug.rand(10, 99).'-ijt'.$item.'.png';
+        //         $path = public_path() . $image_name;
+        //         file_put_contents($path, $imgeData);
                 
-                $image->removeAttribute('src');
-                $image->setAttribute('src', $image_name);
-            }
-        }
+        //         $image->removeAttribute('src');
+        //         $image->setAttribute('src', $image_name);
+        //     }
+        // }
     
-        $content = $dom->saveHTML();
+        // $content = $dom->saveHTML();
 
         if ($request->hasFile('gambar')) {
             $gambar = $request->file('gambar');
