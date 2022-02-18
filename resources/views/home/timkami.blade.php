@@ -24,8 +24,8 @@
 <section class="main-content">
     <div class="container-xl">
 
-        <h2 style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;">Tentang Kami</h2>
-        <p style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;">Indra Jatim adalah sebuah
+        <h2>Tentang Kami</h2>
+        <p>Indra Jatim adalah sebuah
             wahana komunikasi massa yang
             melaksanakan kegiatan jurnalistik meliputi, mencari, memperoleh, memiliki,
             menyimpan, mengolah, dan menyampaikan, informasi baik dalam bentuk tulisan,
@@ -35,7 +35,7 @@
             yang teraktual. Sehingga berguna untuk menambah wawasan serta menjadi ruang
             belajar bagi seluruh pembaca.
         </p>
-        <p style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;">Redaksi Indra Jatim
+        <p>Redaksi Indra Jatim
             berkomitmen, berpegang teguh pada kode etik
             jurnalistik dalam proses peliputan atau penggalian data narasumber, demi
             memberikan sajian berita yang akurat, dan menjadi penyeimbang ditengah
