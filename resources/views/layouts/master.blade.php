@@ -146,6 +146,7 @@
                 <li class=""> <a class="" href="{{ url('catatanakhirpekan') }}">CAP</a></li>
                 <li class=""> <a class="" href="{{ url('tokoh') }}">Tokoh</a></li>
                 <li class=""> <a class="" href="{{ url('advertorial') }}">Advertorial</a></li>
+                <li class=""> <a class="" href="{{ url('tentang-indrajatim') }}">Tentang Indrajatim</a></li>
             </ul>
         </nav>
 
