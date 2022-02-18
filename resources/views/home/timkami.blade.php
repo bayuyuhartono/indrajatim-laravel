@@ -24,7 +24,9 @@
 <section class="main-content">
     <div class="container-xl">
 
-        <h2 style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;">Tentang Indrajatim</h2><p style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;">Indra Jatim adalah sebuah wahana komunikasi massa yang
+        <h2 style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;">Tentang Kami</h2>
+        <p style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;">Indra Jatim adalah sebuah
+            wahana komunikasi massa yang
             melaksanakan kegiatan jurnalistik meliputi, mencari, memperoleh, memiliki,
             menyimpan, mengolah, dan menyampaikan, informasi baik dalam bentuk tulisan,
             foto, dan video, serta data dan grafik, maupun dalam bentuk lainnya. Lahir pada
@@ -32,23 +34,26 @@
             mendengar, dan menyajikan seluruh peristiwa kehidupan masyarakat Jawa Timur
             yang teraktual. Sehingga berguna untuk menambah wawasan serta menjadi ruang
             belajar bagi seluruh pembaca.
-            </p><p style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;">Redaksi Indra Jatim berkomitmen, berpegang teguh pada kode etik
+        </p>
+        <p style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;">Redaksi Indra Jatim
+            berkomitmen, berpegang teguh pada kode etik
             jurnalistik dalam proses peliputan atau penggalian data narasumber, demi
             memberikan sajian berita yang akurat, dan menjadi penyeimbang ditengah
-            derasnya arus informasi yang diterima oleh masyarakat.<br></p><h2>Tim Kami</h2>
-                    <p><b>Dewan Redaksi</b></p>
-                    <p>Fahmi Faqih</p>
-                    <p><b>Pemimpin Redaksi</b> </p>
-                    <p>Satrio Nugroho</p>
-                    <p><b>Jurnalis</b></p>
-                    <p>Izzatun Najibah</p>
-                    <p>Canty Nadya Putri</p>
-                    <p>Madania Nur Aisyah Putri</p>
-                    <p><b>Desain Grafis</b></p>
-                    <p>Satriyo Bimo</p>
-                    <p><b>IT</b></p>
-                    <p>Bayu Puguh Yuhartono</p>
-                    <p><br></p>
+            derasnya arus informasi yang diterima oleh masyarakat.<br></p>
+        <h2>Tim Kami</h2>
+        <p><b>Dewan Redaksi</b></p>
+        <p>Fahmi Faqih</p>
+        <p><b>Pemimpin Redaksi</b> </p>
+        <p>Satrio Nugroho</p>
+        <p><b>Jurnalis</b></p>
+        <p>Izzatun Najibah</p>
+        <p>Canty Nadya Putri</p>
+        <p>Madania Nur Aisyah Putri</p>
+        <p><b>Desain Grafis</b></p>
+        <p>Satriyo Bimo</p>
+        <p><b>IT</b></p>
+        <p>Bayu Puguh Yuhartono</p>
+        <p><br></p>
 
     </div>
 </section>
