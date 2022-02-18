@@ -150,6 +150,7 @@ class AdminBeritaController extends Controller
 
         $content = $request->content;
         $content = str_replace("../../","/",$content);
+        $content = str_replace("//","/",$content);
         // $dom = new \DomDocument();
         // $dom->loadHtml($content, LIBXML_HTML_NOIMPLIED | LIBXML_HTML_NODEFDTD);
         // $imageFile = $dom->getElementsByTagName('img');
