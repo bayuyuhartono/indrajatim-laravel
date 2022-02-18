@@ -33,14 +33,16 @@ Route::prefix('admin')->group(function () {
         Route::get('berita/delete/{id}', [AdminBeritaController::class, 'destroy']);
         Route::post('berita/edit/{id}', [AdminBeritaController::class, 'update']);
         Route::get('getBerita', [AdminBeritaController::class, 'getBerita'])->name('ajax.berita'); 
+        Route::post('/uploadimage', [AdminBeritaController::class, 'uploadimage']);
     });
 });
 
 Route::get('/', [BerandaController::class, 'index']);
 Route::get('sitemap.xml', [XmlController::class, 'sitemap']);
+Route::get('tentang-indrajatim', [BerandaController::class, 'timkami']);
 Route::get('{kategori}/sitemap.xml', [XmlController::class, 'sitemapKategori']);
 Route::get('pencarian', [BerandaController::class, 'cari']);
 Route::get('pencarian/{keyword}', [BerandaController::class, 'pencarian']);
-Route::get('{kategori}', [BerandaController::class, 'kategori_list']);
 Route::get('{kategori}/{slug}', [DetailController::class, 'detail']);
 Route::get('{kategori}/detail/{slug}', [RedirectController::class, 'detail_old_url']);
+Route::get('{kategori}', [BerandaController::class, 'kategori_list']);

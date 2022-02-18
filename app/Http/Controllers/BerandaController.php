@@ -107,4 +107,9 @@ class BerandaController extends Controller
 
         return $populer;
     }
+
+    public function timkami()
+    {
+        return view('home.timkami');
+    }
 }

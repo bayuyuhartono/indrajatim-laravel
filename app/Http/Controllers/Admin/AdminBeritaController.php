@@ -265,4 +265,14 @@ class AdminBeritaController extends Controller
 
         return $kategori;
     }
+
+    public function uploadimage(Request $request){
+        if($file = $request->hasFile('file')) {
+            $file = $request->file('file') ;
+            $fileName = $file->getClientOriginalName() ;
+            $destinationPath = public_path().'/content_images' ;
+            $file->move($destinationPath,$fileName);
+            return response()->json(['location' => '/content_images/'.$fileName]); 
+        }
+    }
 }

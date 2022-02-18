@@ -2,7 +2,6 @@
 @push('styles')
     <link href="{{ asset('assets/admin/res') }}/lib/medium-editor/medium-editor.css" rel="stylesheet">
     <link href="{{ asset('assets/admin/res') }}/lib/medium-editor/default.css" rel="stylesheet">
-    <link href="{{ asset('assets/admin/res') }}/lib/summernote/summernote-bs4.css" rel="stylesheet">
 @endpush
 @section('content')
 
@@ -90,7 +89,7 @@
                     <div class="col-lg-12">
                         <div class="form-group">
                             <label class="form-control-label">Content: <span class="tx-danger">*</span></label>
-                            <textarea id="summernote" name="content"> </textarea>
+                            <textarea id="theeditor" name="content"> </textarea>
                         </div>
                     </div>
                 </div><!-- row -->
@@ -109,7 +108,7 @@
 
 @push('scripts')
     <script src="{{ asset('assets/admin/res') }}/lib/medium-editor/medium-editor.js"></script>
-    <script src="{{ asset('assets/admin/res') }}/lib/summernote/summernote-bs4.min.js"></script>
+    <script src="https://cdn.tiny.cloud/1/wgo0qe6aabh3vickenbemgqpkiyfmzck85pqjkgdrmecnd8v/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
     <script>
         var slug = function(str) {
             var $slug = '';
@@ -142,20 +141,68 @@
 
         var editor = new MediumEditor('.editable');
 
-        $('#summernote').summernote({
-            height: 400,
-            tooltip: false,
-            toolbar: [
-                // [groupName, [list of button]]
-                ['style', ['bold', 'italic', 'underline', 'clear']],
-                ['font', ['strikethrough', 'superscript', 'subscript']],
-                ['fontsize', ['fontsize','fontname']],
-                ['color', ['color']],
-                ['para', ['ul', 'ol', 'paragraph']],
-                ['height', ['height']],
-                ['insert', ['picture','link','video','table']],
-                ['misc', ['undo','redo']]
-            ]
+        tinymce.init({
+            selector: '#theeditor',
+            plugins: 'print preview paste importcss searchreplace autolink autosave save directionality code visualblocks visualchars fullscreen image link media template codesample table charmap hr pagebreak nonbreaking anchor toc insertdatetime advlist lists wordcount imagetools textpattern noneditable help charmap quickbars emoticons',
+            image_title: true,
+            automatic_uploads: true,
+            images_upload_url: '/admin/uploadimage',
+            file_picker_types: 'image',
+            file_picker_callback: function(cb, value, meta) {
+                var input = document.createElement('input');
+                input.setAttribute('type', 'file');
+                input.setAttribute('accept', 'image/*');
+                input.onchange = function() {
+                    var file = this.files[0];
+
+                    var reader = new FileReader();
+                    reader.readAsDataURL(file);
+                    reader.onload = function () {
+                        var id = 'blobid' + (new Date()).getTime();
+                        var blobCache =  tinymce.activeEditor.editorUpload.blobCache;
+                        var base64 = reader.result.split(',')[1];
+                        var blobInfo = blobCache.create(id, file, base64);
+                        blobCache.add(blobInfo);
+                        cb(blobInfo.blobUri(), { title: file.name });
+                    };
+                };
+                input.click();
+            },
+            menubar: 'file edit view insert format tools table help',
+            toolbar: 'undo redo | bold italic underline strikethrough | fontselect fontsizeselect formatselect | alignleft aligncenter alignright alignjustify | outdent indent |  numlist bullist | forecolor backcolor removeformat | pagebreak lineheight | charmap emoticons | fullscreen  preview save print | insertfile image media template link anchor codesample | ltr rtl',
+            toolbar_sticky: true,
+            autosave_ask_before_unload: true,
+            autosave_interval: "30s",
+            autosave_prefix: "{path}{query}-{id}-",
+            autosave_restore_when_empty: false,
+            autosave_retention: "2m",
+            image_advtab: true,
+            importcss_append: true,
+            templates: [{
+                title: 'New Table',
+                description: 'creates a new table',
+                content: '<div class="mceTmpl"><table width="98%%"  border="0" cellspacing="0" cellpadding="0"><tr><th scope="col"> </th><th scope="col"> </th></tr><tr><td> </td><td> </td></tr></table></div>'
+            },
+            {
+                title: 'Starting my story',
+                description: 'A cure for writers block',
+                content: 'Once upon a time...'
+            },
+            {
+                title: 'New list with dates',
+                description: 'New List with dates',
+                content: '<div class="mceTmpl"><span class="cdate">cdate</span><br /><span class="mdate">mdate</span><h2>My List</h2><ul><li></li><li></li></ul></div>'
+            }
+            ],
+            template_cdate_format: '[Date Created (CDATE): %m/%d/%Y : %H:%M:%S]',
+            template_mdate_format: '[Date Modified (MDATE): %m/%d/%Y : %H:%M:%S]',
+            height: 520,
+            image_caption: true,
+            quickbars_selection_toolbar: 'bold italic | quicklink h2 h3 blockquote quickimage quicktable',
+            noneditable_noneditable_class: "mceNonEditable",
+            toolbar_mode: 'sliding',
+            contextmenu: "link image imagetools table",
         });
+
     </script>
 @endpush
