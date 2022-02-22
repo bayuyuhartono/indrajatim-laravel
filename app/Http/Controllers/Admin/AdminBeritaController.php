@@ -273,7 +273,7 @@ class AdminBeritaController extends Controller
         if($file = $request->hasFile('file')) {
             $file = $request->file('file') ;
             $fileName = $file->getClientOriginalName() ;
-            $file->move('assets/admin/upload/berita/', $fileName);
+            $file->move('content_images/', $fileName);
 
             return response()->json(['location' => '/content_images/'.$fileName]); 
         }
