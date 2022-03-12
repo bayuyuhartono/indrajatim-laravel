@@ -385,7 +385,7 @@
 								<img src="{{ asset('assets/other/plasma_cutting.png') }}" alt="Advertisement" />	
 								<img src="{{ asset('assets/other/alkautsar.jpg') }}" alt="Advertisement" />	
 								<img src="{{ asset('assets/other/sklera.png') }}" alt="Advertisement" />	
-								<img src="{{ asset('assets/other/sedulur.png') }}" alt="Advertisement" />	
+								<img src="{{ asset('assets/other/sedulur.jpg') }}" alt="Advertisement" />	
 								<img src="{{ asset('assets/other/spacebanner_3.png') }}" alt="Advertisement" />	
 								<img src="{{ asset('assets/other/spacebanner_4.png') }}" alt="Advertisement" />	
 								<img src="{{ asset('assets/other/spacebanner_5.png') }}" alt="Advertisement" />	
