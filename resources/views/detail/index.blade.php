@@ -144,14 +144,32 @@
 							<span class="ads-title">- Sponsored Ad -</span>
 							<a href="#" class="widget-ads">
 								<img src="{{ asset('assets/admin/upload/banner/1633681714.jpg') }}" alt="Advertisement" />	
+							</a>
+							<a href="#" class="widget-ads">
 								<img src="{{ asset('assets/admin/upload/banner/amigos.jpg') }}" alt="Advertisement" />	
-								<img src="{{ asset('assets/admin/upload/banner/griyabersemi.jpg') }}" alt="Advertisement" />	
-								<img src="{{ asset('assets/other/plasma_cutting.png') }}" alt="Advertisement" />	
+							</a>
+							<a href="#" class="widget-ads">
+								<img src="{{ asset('assets/admin/upload/banner/griyabersemi.jpg') }}" alt="Advertisement" />
+							</a>
+							<a href="#" class="widget-ads">	
+								<img src="{{ asset('assets/other/plasma_cutting.png') }}" alt="Advertisement" />
+							</a>
+							<a href="#" class="widget-ads">	
 								<img src="{{ asset('assets/other/alkautsar.jpg') }}" alt="Advertisement" />	
+							</a>
+							<a href="#" class="widget-ads">
 								<img src="{{ asset('assets/other/sklera.png') }}" alt="Advertisement" />	
+							</a>
+							<a href="https://wa.me/628979951727" class="widget-ads">
 								<img src="{{ asset('assets/other/sedulur.jpg') }}" alt="Advertisement" />	
+							</a>
+							<a href="#" class="widget-ads">
 								<img src="{{ asset('assets/other/spacebanner_3.png') }}" alt="Advertisement" />	
+							</a>
+							<a href="#" class="widget-ads">
 								<img src="{{ asset('assets/other/spacebanner_4.png') }}" alt="Advertisement" />	
+							</a>
+							<a href="#" class="widget-ads">
 								<img src="{{ asset('assets/other/spacebanner_5.png') }}" alt="Advertisement" />	
 							</a>
 						</div>
