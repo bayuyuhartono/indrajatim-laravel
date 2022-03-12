@@ -145,19 +145,19 @@
 							<a href="#" class="widget-ads">
 								<img src="{{ asset('assets/admin/upload/banner/1633681714.jpg') }}" alt="Advertisement" />	
 							</a>
-							<a href="#" class="widget-ads">
+							<a href="https://wa.me/6285604140095" class="widget-ads">
 								<img src="{{ asset('assets/admin/upload/banner/amigos.jpg') }}" alt="Advertisement" />	
 							</a>
-							<a href="#" class="widget-ads">
+							<a href="https://wa.me/6287853098462" class="widget-ads">
 								<img src="{{ asset('assets/admin/upload/banner/griyabersemi.jpg') }}" alt="Advertisement" />
 							</a>
-							<a href="#" class="widget-ads">	
+							<a href="https://wa.me/6281252356193" class="widget-ads">	
 								<img src="{{ asset('assets/other/plasma_cutting.png') }}" alt="Advertisement" />
 							</a>
-							<a href="#" class="widget-ads">	
+							<a href="https://wa.me/6288989493158" class="widget-ads">	
 								<img src="{{ asset('assets/other/alkautsar.jpg') }}" alt="Advertisement" />	
 							</a>
-							<a href="#" class="widget-ads">
+							<a href="https://wa.me/628958811444" class="widget-ads">
 								<img src="{{ asset('assets/other/sklera.png') }}" alt="Advertisement" />	
 							</a>
 							<a href="https://wa.me/628979951727" class="widget-ads">
