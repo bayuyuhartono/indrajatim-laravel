@@ -160,11 +160,11 @@
 							<a href="https://wa.me/628958811444" class="widget-ads">
 								<img src="{{ asset('assets/other/sklera.png') }}" alt="Advertisement" />	
 							</a>
-							<a href="https://wa.me/628979951727" class="widget-ads">
-								<img src="{{ asset('assets/other/sedulur.jpg') }}" alt="Advertisement" />	
+							<a href="https://wa.me/6281259674802" class="widget-ads">
+								<img src="{{ asset('assets/other/bromomid.jpeg') }}" alt="Advertisement" />	
 							</a>
-							<a href="#" class="widget-ads">
-								<img src="{{ asset('assets/other/spacebanner_3.png') }}" alt="Advertisement" />	
+							<a href="https://wa.me/628992520314" class="widget-ads">
+								<img src="{{ asset('assets/other/samedayser.png') }}" alt="Advertisement" />	
 							</a>
 							<a href="#" class="widget-ads">
 								<img src="{{ asset('assets/other/spacebanner_4.png') }}" alt="Advertisement" />	
