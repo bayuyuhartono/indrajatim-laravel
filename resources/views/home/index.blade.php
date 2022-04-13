@@ -400,7 +400,7 @@
 								<img src="{{ asset('assets/other/bromomid.jpeg') }}" alt="Advertisement" />	
 							</a>
 							<a href="https://wa.me/628992520314" class="widget-ads">
-								<img src="{{ asset('assets/other/samedayser.png') }}" alt="Advertisement" />	
+								<img src="{{ asset('assets/other/samedayser.jpg') }}" alt="Advertisement" />	
 							</a>
 							<a href="#" class="widget-ads">
 								<img src="{{ asset('assets/other/spacebanner_4.png') }}" alt="Advertisement" />	
