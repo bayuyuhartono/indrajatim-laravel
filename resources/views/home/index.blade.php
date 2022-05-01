@@ -108,7 +108,7 @@
 					<div class="ads-horizontal text-md-center">
 						<span class="ads-title">- Sponsored Ad -</span>
 						<a href="#">
-							<img src="https://indrajatim.com/assets/admin/upload/banner/1636963891.jpg" alt="Advertisement" />
+							<img src="https://indrajatim.com/assets/admin/upload/banner/kusnadi.png" alt="Advertisement" />
 						</a>
 					</div>
 
@@ -331,7 +331,7 @@
 					<div class="ads-horizontal text-md-center">
 						<span class="ads-title">- Sponsored Ad -</span>
 						<a href="#">
-							<img src="https://indrajatim.com/assets/admin/upload/banner/1637030741.jpg" alt="Advertisement" />
+							<img src="https://indrajatim.com/assets/admin/upload/banner/senna.png" alt="Advertisement" />
 						</a>
 					</div>
 
@@ -403,7 +403,7 @@
 								<img src="{{ asset('assets/other/samedayser.jpg') }}" alt="Advertisement" />	
 							</a>
 							<a href="#" class="widget-ads">
-								<img src="{{ asset('assets/other/spacebanner_4.png') }}" alt="Advertisement" />	
+								<img src="{{ asset('assets/other/dw.png') }}" alt="Advertisement" />	
 							</a>
 							<a href="#" class="widget-ads">
 								<img src="{{ asset('assets/other/spacebanner_5.png') }}" alt="Advertisement" />	
