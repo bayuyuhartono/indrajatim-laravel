@@ -402,7 +402,7 @@
 							<a href="https://wa.me/628992520314" class="widget-ads">
 								<img src="{{ asset('assets/other/samedayser.jpg') }}" alt="Advertisement" />	
 							</a>
-							<a href="#" class="widget-ads">
+							<a href="https://wa.me/6282338774009" class="widget-ads">
 								<img src="{{ asset('assets/other/dw.png') }}" alt="Advertisement" />	
 							</a>
 							<a href="#" class="widget-ads">
