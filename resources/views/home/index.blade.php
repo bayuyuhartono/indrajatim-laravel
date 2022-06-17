@@ -396,8 +396,8 @@
 							<a href="https://wa.me/628958811444" class="widget-ads">
 								<img src="{{ asset('assets/other/sklera.png') }}" alt="Advertisement" />	
 							</a>
-							<a href="https://wa.me/6281259674802" class="widget-ads">
-								<img src="{{ asset('assets/other/bromomid.jpeg') }}" alt="Advertisement" />	
+							<a href="https://wa.me/6281334476664" class="widget-ads">
+								<img src="{{ asset('assets/other/bromosunrise.png') }}" alt="Advertisement" />	
 							</a>
 							<a href="https://wa.me/628992520314" class="widget-ads">
 								<img src="{{ asset('assets/other/samedayser.jpg') }}" alt="Advertisement" />	
