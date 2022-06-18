@@ -40,7 +40,7 @@
 					<div class="ads-horizontal text-md-center">
 						<span class="ads-title">- Sponsored Ad -</span>
 						<a href="#">
-							<img src="https://indrajatim.com/assets/admin/upload/banner/kusnadi.png" alt="Advertisement" />
+							<img src="https://indrajatim.com/assets/admin/upload/banner/kusnadist.png" alt="Advertisement" />
 						</a>
 					</div>
 
