@@ -156,6 +156,11 @@ $(document).ready(function() {
     $(window).on("scroll", function() {
       var fromTop = $(window).scrollTop();
       $('body').toggleClass("down", (fromTop > 300));
+      if (fromTop > 300) {
+        $('.spss').show();
+      } else {
+        $('.spss').hide();
+      }
     });
 
 });

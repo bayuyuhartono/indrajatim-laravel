@@ -53,6 +53,7 @@
                         <button class="search icon-button">
                             <i class="icon-magnifier"></i>
                         </button>
+                            <a class="navbar-brand spss" href="{{ url('') }}"><img src="{{ asset('assets/images/logo.png') }}" alt="logo" style="width: 75% !important" /></a> 
                         <button class="burger-menu icon-button ms-2 float-end float-lg-none">
                             <span class="burger-icon"></span>
                         </button>

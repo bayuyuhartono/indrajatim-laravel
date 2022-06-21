@@ -46,6 +46,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.spss{
+  display: none;
+}
+
 img {
   max-width: 100%;
   height: auto;
