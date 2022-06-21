@@ -156,10 +156,12 @@ $(document).ready(function() {
     $(window).on("scroll", function() {
       var fromTop = $(window).scrollTop();
       $('body').toggleClass("down", (fromTop > 300));
-      if (fromTop > 300) {
-        $('.spss').show();
-      } else {
-        $('.spss').hide();
+      if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+        if (fromTop > 300) {
+          $('.spss').show();
+        } else {
+          $('.spss').hide();
+        }
       }
     });
 
