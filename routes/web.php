@@ -6,6 +6,7 @@ use App\Http\Middleware\AdminCheck;
 use App\Http\Controllers\Admin\AdminAuthController;
 use App\Http\Controllers\Admin\AdminDashboardController;
 use App\Http\Controllers\Admin\AdminBeritaController;
+use App\Http\Controllers\Admin\AdminBannerController;
 
 use App\Http\Controllers\BerandaController;
 use App\Http\Controllers\DetailController;
@@ -34,6 +35,11 @@ Route::prefix('admin')->group(function () {
         Route::post('berita/edit/{id}', [AdminBeritaController::class, 'update']);
         Route::get('getBerita', [AdminBeritaController::class, 'getBerita'])->name('ajax.berita'); 
         Route::post('/uploadimage', [AdminBeritaController::class, 'uploadimage']);
+
+        Route::get('/banner-side', [AdminBannerController::class, 'bannerSide']);
+        Route::post('/banner-side', [AdminBannerController::class, 'bannerSideStore']);
+        Route::get('/banner-main', [AdminBannerController::class, 'bannerMain']);
+        Route::post('/banner-main', [AdminBannerController::class, 'bannerMainStore']);
     });
 });
 

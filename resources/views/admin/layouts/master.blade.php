@@ -84,9 +84,38 @@
         <div class="tab-content">
             <div id="mainMenu" class="tab-pane active">
 
-                @include('admin.layouts.sidebar')
+                <ul class="nav am-sideleft-menu">
+                    {{-- <li class="nav-item">
+                      <a href="{{ url('admin') }}" class="nav-link active">
+                        <i class="icon ion-ios-home-outline"></i>
+                        <span>Dashboard</span>
+                      </a>
+                    </li><!-- nav-item --> --}}
+                    <li class="nav-item">
+                      <a href="{{ url('admin/berita') }}" class="nav-link active">
+                        <i class="icon ion-ios-list-outline"></i>
+                        <span>Berita</span>
+                      </a>
+                    </li><!-- nav-item -->
+                    <li class="nav-item">
+                        <a href="{{ url('admin/banner-main') }}" class="nav-link active">
+                          <i class="icon ion-ios-list-outline"></i>
+                          <span>Banner Utama</span>
+                        </a>
+                      </li><!-- nav-item -->
+                      <li class="nav-item">
+                          <a href="{{ url('admin/banner-side') }}" class="nav-link active">
+                            <i class="icon ion-ios-list-outline"></i>
+                            <span>Banner Samping</span>
+                          </a>
+                      </li><!-- nav-item -->
+                </ul>
 
             </div><!-- #mainMenu -->
+            <div id="settingMenu" class="tab-pane">
+
+
+            </div><!-- #settingMenu -->
         </div><!-- tab-content -->
     </div><!-- am-sideleft -->
 
