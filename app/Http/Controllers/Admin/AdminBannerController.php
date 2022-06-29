@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Models\Banner;
+use App\Models\BannerSide;
 use App\Models\BannerHome;
 use Illuminate\Http\Request;
 
@@ -49,5 +49,24 @@ class AdminBannerController extends Controller
         }
 
         return redirect('admin/banner-main')->with('success', 'Ubah Data Berhasil');
+    }
+
+    public function bannerSideStore(Request $request)
+    {
+        $gambarSideName = '';
+
+        if ($request->hasFile('gambar-side')) {
+            $gambarSide = $request->file('gambar-side');
+            $gambarSideName = 'ijtbannerside-' . rand(1000, 9999) .'.'. $gambarSide->getClientOriginalExtension();
+            $gambarSide->move('assets/admin/upload/banner/', $gambarSideName);
+
+            $berita = BannerSide::where('sequence', $request->sequence)
+            ->update([
+                'link' => $request->link,
+                'image' => $gambarSideName,
+            ]);
+        }
+
+        return redirect('admin/banner-side')->with('success', 'Ubah Data Berhasil');
     }
 }

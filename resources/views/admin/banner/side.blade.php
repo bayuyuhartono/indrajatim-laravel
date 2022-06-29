@@ -25,7 +25,7 @@
                     <div class="col-lg-2">
                         <div class="form-group mg-b-10-force">
                             <label class="form-control-label">Urutan: <span class="tx-danger">*</span></label>
-                            <select class="form-control select2 kategori" name="kategori" data-placeholder="Pilih Urutan">
+                            <select class="form-control select2 sequence" name="sequence" data-placeholder="Pilih Urutan">
                                 <option value="1">1</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
@@ -42,13 +42,13 @@
                     <div class="col-lg-4">
                         <div class="form-group mg-b-10-force">
                             <label class="form-control-label">Gambar: <span class="tx-danger">*</span></label>
-                            <input type="file" name="gambar-bawah" class="form-control gambar">
+                            <input type="file" name="gambar-side" class="form-control gambar">
                         </div>
                     </div>
                     <div class="col-lg-6">
                         <div class="form-group">
                             <label class="form-control-label">Link: <span class="tx-danger">*</span></label>
-                            <input class="form-control judul" type="text" name="linkBawah" value=""
+                            <input class="form-control judul" type="text" name="link" value=""
                                 placeholder="Masukan link">
                         </div>
                     </div>
