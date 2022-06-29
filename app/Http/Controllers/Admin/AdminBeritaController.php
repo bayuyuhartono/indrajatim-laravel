@@ -94,6 +94,7 @@ class AdminBeritaController extends Controller
         $berita->tanggal = Carbon::createFromFormat('m/d/Y', $request->tanggal);
         $berita->tag = $tag;
         $berita->caption = $request->caption;
+        $berita->hold = $request->hold;
         $berita->content = $content;
         $berita->tanggal_dibuat = Carbon::now();
         $berita->tanggal_diubah = Carbon::now();
@@ -187,6 +188,7 @@ class AdminBeritaController extends Controller
                 'tanggal' => Carbon::createFromFormat('m/d/Y', $request->tanggal),
                 'tag' => $tag,
                 'caption' => $request->caption,
+                'hold' => $request->hold,
                 'content' => $content,
                 'tanggal_diubah' => Carbon::now(),
             ]);
@@ -200,6 +202,7 @@ class AdminBeritaController extends Controller
                 'tanggal' => Carbon::createFromFormat('m/d/Y', $request->tanggal),
                 'tag' => $tag,
                 'caption' => $request->caption,
+                'hold' => $request->hold,
                 'content' => $content,
                 'tanggal_diubah' => Carbon::now(),
             ]);
@@ -228,6 +231,7 @@ class AdminBeritaController extends Controller
             $data = Berita::select('tbl_berita.*', 'tbl_kategori.kategori', 'tbl_kategori.kategori_slug as kategori_slug')
                 ->join('tbl_kategori', 'tbl_kategori.id', '=', 'tbl_berita.id_kategori')
                 ->orderBy('id_berita', 'desc') 
+                ->take(1000)
                 ->get();
 
             return Datatables::of($data)
@@ -239,6 +243,13 @@ class AdminBeritaController extends Controller
                 ->addColumn('gambar', function ($row) { 
                     $url = asset('assets/admin/upload/berita/'.$row->gambar);
                     return '<img src='.$url.' border="0" width="100" class="img-rounded" align="center" />'; 
+                })
+                ->addColumn('tayang', function ($row) { 
+                    if ($row->hold == 1) {
+                       return 'Tidak';
+                    } else {
+                        return 'Ya';
+                    }
                 })
                 ->rawColumns(['action','gambar'])
                 ->make(true);

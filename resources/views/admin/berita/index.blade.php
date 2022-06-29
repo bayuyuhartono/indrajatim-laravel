@@ -23,6 +23,7 @@
                     <th>Kategori</th>
                     <th>Judul</th>
                     <th>Tanggal</th>
+                    <th>Tayang</th>
                     <th>Action</th>
                 </tr>
             </thead>
@@ -54,6 +55,7 @@
                 {data: 'kategori', name: 'kategori'},
                 {data: 'judul', name: 'judul'},
                 {data: 'tanggal', name: 'tanggal'},
+                {data: 'tayang', name: 'tayang'},
                 {
                     data: 'action', 
                     name: 'action', 

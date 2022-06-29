@@ -88,6 +88,15 @@
                                 placeholder="Masukan caption" required="">
                         </div>
                     </div>
+                    <div class="col-lg-3">
+                        <div class="form-group mg-b-10-force">
+                            <label class="form-control-label">Tayang: <span class="tx-danger">*</span></label>
+                            <select class="form-control" name="hold" data-placeholder="Pilih tayang">
+                                <option value="0" <?= $berita->hold == 0 ? 'selected = "selected"' : '' ?>>Ya</option>
+                                <option value="1" <?= $berita->hold == 1 ? 'selected = "selected"' : '' ?>>Tidak</option>
+                            </select>
+                        </div>
+                    </div>
                     <div class="col-lg-12">
                         <div class="form-group">
                             <label class="form-control-label">Content: <span class="tx-danger">*</span></label>

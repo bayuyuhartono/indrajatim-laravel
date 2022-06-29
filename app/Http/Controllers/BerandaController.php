@@ -13,6 +13,7 @@ class BerandaController extends Controller
     {
         $carouselnews = Berita::select('tbl_berita.*', 'tbl_kategori.kategori', 'tbl_kategori.kategori_slug as kategori_slug')
             ->join('tbl_kategori', 'tbl_kategori.id', '=', 'tbl_berita.id_kategori')
+            ->where('tbl_berita.hold',0)
             ->orderBy('tanggal', 'desc') 
             ->take(3)
             ->get();
@@ -20,6 +21,7 @@ class BerandaController extends Controller
         $infoterkini = Berita::select('tbl_berita.*', 'tbl_kategori.kategori', 'tbl_kategori.kategori_slug as kategori_slug')
             ->join('tbl_kategori', 'tbl_kategori.id', '=', 'tbl_berita.id_kategori')
             ->where('id_kategori','4')
+            ->where('tbl_berita.hold',0)
             ->orderBy('tanggal', 'desc') 
             ->take(5)
             ->get();
@@ -27,6 +29,7 @@ class BerandaController extends Controller
         $kabarjatim = Berita::select('tbl_berita.*', 'tbl_kategori.kategori', 'tbl_kategori.kategori_slug as kategori_slug')
             ->join('tbl_kategori', 'tbl_kategori.id', '=', 'tbl_berita.id_kategori')
             ->where('id_kategori','6')
+            ->where('tbl_berita.hold',0)
             ->orderBy('tanggal', 'desc') 
             ->take(6)
             ->get();
@@ -34,6 +37,7 @@ class BerandaController extends Controller
         $budaya = Berita::select('tbl_berita.*', 'tbl_kategori.kategori', 'tbl_kategori.kategori_slug as kategori_slug')
             ->join('tbl_kategori', 'tbl_kategori.id', '=', 'tbl_berita.id_kategori')
             ->where('id_kategori','2')
+            ->where('tbl_berita.hold',0)
             ->orderBy('tanggal', 'desc') 
             ->take(5)
             ->get();
@@ -41,6 +45,7 @@ class BerandaController extends Controller
         $sejarah = Berita::select('tbl_berita.*', 'tbl_kategori.kategori', 'tbl_kategori.kategori_slug as kategori_slug')
             ->join('tbl_kategori', 'tbl_kategori.id', '=', 'tbl_berita.id_kategori')
             ->where('id_kategori','3')
+            ->where('tbl_berita.hold',0)
             ->orderBy('tanggal', 'desc') 
             ->take(5)
             ->get();
@@ -70,6 +75,7 @@ class BerandaController extends Controller
         $listBerita = Berita::select('tbl_berita.*', 'tbl_kategori.kategori', 'tbl_kategori.kategori_slug as kategori_slug')
             ->join('tbl_kategori', 'tbl_kategori.id', '=', 'tbl_berita.id_kategori')
             ->where('id_kategori',$kategoriDetail['id'])
+            ->where('tbl_berita.hold',0)
             ->orderBy('tanggal', 'desc') 
             ->paginate(12);
 
@@ -101,6 +107,7 @@ class BerandaController extends Controller
         $populer = Berita::select('tbl_berita.*', 'tbl_kategori.kategori', 'tbl_kategori.kategori_slug as kategori_slug')
             ->join('tbl_kategori', 'tbl_kategori.id', '=', 'tbl_berita.id_kategori')
             ->where('tanggal', '>=', Carbon::now()->subDays(14)->toDateTimeString())
+            ->where('tbl_berita.hold',0)
             ->orderBy('count_hits', 'desc') 
             ->take(5)
             ->get();
