@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Berita;
 use App\Models\Kategori;
+use App\Models\BannerSide;
+use App\Models\BannerHome;
 use Carbon\Carbon;
 
 class DetailController extends Controller
@@ -33,10 +35,15 @@ class DetailController extends Controller
 
         $populer = $this->getPopuler();
 
+        $bannerhorizontal = BannerHome::get();
+        $bannervertical = BannerSide::get();
+
         $res = view('detail.index', [
             'detailBerita' => $detailBerita,
             'tag' => $tag,
             'populer' => $populer,
+            'bannerhorizontal' => $bannerhorizontal,
+            'bannervertical' => $bannervertical
         ]);
         return $res;
     }

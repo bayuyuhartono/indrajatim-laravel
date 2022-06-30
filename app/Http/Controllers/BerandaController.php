@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Berita;
 use App\Models\Kategori;
+use App\Models\BannerSide;
+use App\Models\BannerHome;
 use Carbon\Carbon;
 
 class BerandaController extends Controller
@@ -50,6 +52,9 @@ class BerandaController extends Controller
             ->take(5)
             ->get();
 
+        $bannerhorizontal = BannerHome::get();
+        $bannervertical = BannerSide::get();
+
         $populer = $this->getPopuler();
 
         $res = view('home.index', [
@@ -58,7 +63,9 @@ class BerandaController extends Controller
             'kabarjatim' => $kabarjatim,
             'budaya' => $budaya,
             'sejarah' => $sejarah,
-            'populer' => $populer
+            'populer' => $populer,
+            'bannerhorizontal' => $bannerhorizontal,
+            'bannervertical' => $bannervertical
         ]);
         return $res;
     }

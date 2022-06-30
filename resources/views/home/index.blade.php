@@ -108,7 +108,7 @@
 					<div class="ads-horizontal text-md-center">
 						<span class="ads-title">- Sponsored Ad -</span>
 						<a href="#">
-							<img src="https://indrajatim.com/assets/admin/upload/banner/kusnadist.png" alt="Advertisement" />
+							<img src="{{ asset('assets/admin/upload/banner/'.$bannerhorizontal[0]->image) }}" onerror="this.src='{{ asset('assets/images/posts/trending-sm-4.jpg') }}'" alt="Advertisement" />
 						</a>
 					</div>
 
@@ -331,7 +331,7 @@
 					<div class="ads-horizontal text-md-center">
 						<span class="ads-title">- Sponsored Ad -</span>
 						<a href="#">
-							<img src="https://indrajatim.com/assets/admin/upload/banner/senna.png" alt="Advertisement" />
+							<img src="{{ asset('assets/admin/upload/banner/'.$bannerhorizontal[1]->image) }}" onerror="this.src='{{ asset('assets/images/posts/trending-sm-4.jpg') }}'" alt="Advertisement" />
 						</a>
 					</div>
 
@@ -378,36 +378,11 @@
 						<!-- widget advertisement -->
 						<div class="widget no-container rounded text-md-center">
 							<span class="ads-title">- Sponsored Ad -</span>
-							<a href="#" class="widget-ads">
-								<img src="{{ asset('assets/admin/upload/banner/1633681714.jpg') }}" alt="Advertisement" />	
-							</a>
-							<a href="https://wa.me/6285604140095" class="widget-ads">
-								<img src="{{ asset('assets/admin/upload/banner/amigos.jpg') }}" alt="Advertisement" />	
-							</a>
-							<a href="https://wa.me/6287853098462" class="widget-ads">
-								<img src="{{ asset('assets/admin/upload/banner/griyabersemi.jpg') }}" alt="Advertisement" />
-							</a>
-							<a href="https://wa.me/6281252356193" class="widget-ads">	
-								<img src="{{ asset('assets/other/plasma_cutting.png') }}" alt="Advertisement" />
-							</a>
-							<a href="https://wa.me/6288989493158" class="widget-ads">	
-								<img src="{{ asset('assets/other/alkautsar.jpg') }}" alt="Advertisement" />	
-							</a>
-							<a href="https://wa.me/628958811444" class="widget-ads">
-								<img src="{{ asset('assets/other/sklera.png') }}" alt="Advertisement" />	
-							</a>
-							<a href="https://wa.me/6281334476664" class="widget-ads">
-								<img src="{{ asset('assets/other/bromosunrise.png') }}" alt="Advertisement" />	
-							</a>
-							<a href="https://wa.me/628992520314" class="widget-ads">
-								<img src="{{ asset('assets/other/samedayser.jpg') }}" alt="Advertisement" />	
-							</a>
-							<a href="https://wa.me/6282338774009" class="widget-ads">
-								<img src="{{ asset('assets/other/dw.png') }}" alt="Advertisement" />	
-							</a>
-							<a href="#" class="widget-ads">
-								<img src="{{ asset('assets/other/spacebanner_5.png') }}" alt="Advertisement" />	
-							</a>
+							@foreach ($bannervertical as $item)
+								<a href="{{ $item->link }}" class="widget-ads">
+									<img src="{{ asset('assets/admin/upload/banner/'.$item->image) }}" onerror="this.src='{{ asset('assets/images/posts/trending-sm-4.jpg') }}'" alt="Advertisement" />	
+								</a>
+							@endforeach
 						</div>
 
 					</div>
