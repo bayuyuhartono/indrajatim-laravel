@@ -58,6 +58,7 @@ class BeritaController extends Controller
 
         foreach ($berita as $key => $value) {
             $value->gambar = url('/') . '/assets/admin/upload/berita/' . $value->gambar;
+            $value->detail = url('/') . '/api/detail?slug=' . $value->slug;
         }
 
         return $berita;
