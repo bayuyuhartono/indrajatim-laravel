@@ -42,11 +42,9 @@
             derasnya arus informasi yang diterima oleh masyarakat.<br>
         </p>
 
-        <h2>Alamat</h2>
-        <p>Medokan asri barat blok i no. 23, surabaya</p>
+        <p>Alamat: Medokan asri barat blok i no. 23, surabaya</p>
 
-        <h2>Email</h2>
-        <p><a href="mailto:media@indrajatim.com">media@indrajatim.com</a></p>
+        <p>Email: <a href="mailto:media@indrajatim.com">media@indrajatim.com</a></p>
 
         {{-- <h2>Tim Kami</h2>
         <p><b>Dewan Redaksi</b></p>
