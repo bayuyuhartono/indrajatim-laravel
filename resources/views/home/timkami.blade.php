@@ -39,8 +39,9 @@
             berkomitmen, berpegang teguh pada kode etik
             jurnalistik dalam proses peliputan atau penggalian data narasumber, demi
             memberikan sajian berita yang akurat, dan menjadi penyeimbang ditengah
-            derasnya arus informasi yang diterima oleh masyarakat.<br></p>
-        <h2>Tim Kami</h2>
+            derasnya arus informasi yang diterima oleh masyarakat.<br>
+        </p>
+        {{-- <h2>Tim Kami</h2>
         <p><b>Dewan Redaksi</b></p>
         <p>Fahmi Faqih</p>
         <p><b>Pemimpin Redaksi</b> </p>
@@ -53,7 +54,7 @@
         <p>Satriyo Bimo</p>
         <p><b>IT</b></p>
         <p>Bayu Puguh Yuhartono</p>
-        <p><br></p>
+        <p><br></p> --}}
 
     </div>
 </section>
